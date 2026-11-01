@@ -1,31 +1,33 @@
 # Credit Risk Classification
 
-This Google Colab notebook builds and evaluates a binary loan-risk classification workflow using applicant and loan attributes. The main model is XGBoost, with Logistic Regression also explored as a comparison.
+This Google Colab notebook explores binary loan-risk classification using applicant and loan attributes. It trains an XGBoost classifier and also examines Logistic Regression.
 
 ## Workflow
 
-- Upload and inspect `credit_risk_dataset.csv`.
-- Use `loan_status` as the target and the remaining columns as input features.
-- Prepare features and scale them with `StandardScaler`.
-- Create a stratified 80/20 train/test split.
-- Fit an `XGBClassifier` and evaluate predictions with a classification report, confusion matrix, and ROC/AUC curve.
-- Explore a Logistic Regression model in a later notebook section.
+- Load and inspect `credit_risk_dataset.csv`.
+- Use `loan_status` as the target and the remaining columns as model features.
+- Prepare features, scale them with `StandardScaler`, and create a stratified 80/20 train/test split.
+- Fit an `XGBClassifier` and review classification metrics, a confusion matrix, and an ROC/AUC curve.
+- Explore Logistic Regression in a later notebook section.
 
-## Data
+## Dataset
 
-Expected file: `credit_risk_dataset.csv`, containing a `loan_status` column. The notebook requests this file from the user and does not include the dataset in the repository. It also contains an optional CSV export/upload step for a processed dataset.
+The notebook expects `credit_risk_dataset.csv`, which is included in the repository. It contains loan applicant and loan attributes, including the `loan_status` target column.
+
+The dataset is from [Credit Risk Dataset by Lao Tse on Kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset), listed as **CC0 1.0 Public Domain**. Please consult the Kaggle page for the original dataset description and provenance.
 
 ## Run in Google Colab
 
 1. Open `Datascienceproject.ipynb` in Google Colab.
-2. Upload `credit_risk_dataset.csv` when requested.
-3. Run the notebook cells in order and review the evaluation plots and reports.
+2. Download `credit_risk_dataset.csv` from this repository and upload it when the notebook requests the file.
+3. Run the notebook cells in order and review the generated reports and plots.
 
-Install `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `xgboost`, and `shap` in the runtime if needed. Model performance depends on the input data and selected configuration; use the notebook output for the actual run.
+The notebook may export a processed CSV as an optional step. Install any missing packages reported by the Colab runtime, including pandas, NumPy, Matplotlib, Seaborn, scikit-learn, XGBoost, or SHAP as needed. Model performance depends on the data split and configuration; use the metrics from your own run.
 
 ## Repository contents
 
 - `Datascienceproject.ipynb` — data preparation, model training, and evaluation.
+- `credit_risk_dataset.csv` — CC0 credit risk dataset; source and license are linked above.
 - `README.md` — project overview and Colab instructions.
 
 ## Author
